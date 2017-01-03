@@ -4,7 +4,7 @@ This is a hadoop streaming python script for calculation of BEDTools Jaccard sco
 
 ## Hadoop config
 
-Raspberry pi3 specific hadoop config files can be found here [Hadoop config files](../hadoop_config/).
+Raspberry pi3 specific hadoop config files can be found here [Hadoop config files](hadoop_streaming_python_script/hadoop_config/).
 
 ## Docker config
 
@@ -14,7 +14,7 @@ I used a docker image for these data analysis script. This image can be either b
 
 Input file path records are fetched from table created by [get_all_bed_files.py](https://github.com/avikdatta/python_scripts/tree/master/scripts/load_ftp_bed_files_in_db) script. 
 
-Output scores are stored in a separate mysql table [bed_peak_jaccard.sql](../../sql/bed_peak_jaccard.sql)
+Output scores are stored in a separate mysql table [bed_peak_jaccard.sql](hadoop_streaming_python_script/sql/bed_peak_jaccard.sql)
 
 <pre><code>
   mysql $DB_OPTIONS < bed_peak_jaccard.sql
@@ -32,11 +32,11 @@ The bed files were copied to every node due to lack of a network mounted filesys
 
 ## Hadoop mapper wrapper
 
-I used following wrapper bash script for calling the python mapper scrypt with the specific docker options [bed_peak_jaccard_calculation_mapper.sh](../../hadoop_mapper_wrapper/bed_peak_jaccard_calculation_mapper.sh)
+I used following wrapper bash script for calling the python mapper scrypt with the specific docker options [bed_peak_jaccard_calculation_mapper.sh](hadoop_streaming_python_script/hadoop_mapper_wrapper/bed_peak_jaccard_calculation_mapper.sh)
 
 ## Python mapper script
 
-The python mapper script can be found here [bed_peak_mapper.py](../../script/bed_peak_jaccard_calculation/bed_peak_mapper.py)
+The python mapper script can be found here [bed_peak_mapper.py](hadoop_streaming_python_script/script/bed_peak_jaccard_calculation/bed_peak_mapper.py)
 
 ## Load input to HDFS
 
@@ -48,4 +48,4 @@ Following command can be used for loading the input text file to the HDFS file s
 
 ## Run Yarn command
 
-Once the input file is loaded to the HDFS system and the python and bash scripts are accessible from all the nodes, run the following command from master node (use screen) for submitting jobs [bed_peak_jaccard_calculation.sh](../../hadoop_command/bed_peak_jaccard_calculation/bed_peak_jaccard_calculation.sh).
+Once the input file is loaded to the HDFS system and the python and bash scripts are accessible from all the nodes, run the following command from master node (use screen) for submitting jobs [bed_peak_jaccard_calculation.sh](hadoop_streaming_python_script/hadoop_command/bed_peak_jaccard_calculation/bed_peak_jaccard_calculation.sh).
