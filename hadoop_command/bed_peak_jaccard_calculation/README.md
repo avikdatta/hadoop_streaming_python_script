@@ -22,7 +22,7 @@ Output scores are stored in a separate mysql table [bed_peak_jaccard.sql](hadoop
 
 ## Input file generation
 
-This hadoop streaming script require a text input file present in the file system. I can be generated using the following script [generate_input_pair.py](../../script/bed_peak_jaccard_calculation/generate_input_pair.py). This script require an index file from [Blueprint project's FTP site](http://ftp.ebi.ac.uk/pub/databases/blueprint/releases/current_release/homo_sapiens/20160816.data.index) as input.
+This hadoop streaming script require a text input file present in the file system. It can be generated using following script [generate_input_pair.py](../../script/bed_peak_jaccard_calculation/generate_input_pair.py). This script require an index file from [Blueprint project's FTP site](http://ftp.ebi.ac.uk/pub/databases/blueprint/releases/current_release/homo_sapiens/20160816.data.index) as input.
 
 <pre><code>
   python get_all_bed_files.py -i INDEX_FILE > HADOOP_INPUT_FILE
