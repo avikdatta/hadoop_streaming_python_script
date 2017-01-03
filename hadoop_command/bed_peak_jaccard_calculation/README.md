@@ -36,7 +36,7 @@ I used following wrapper bash script for calling the python mapper scrypt with t
 
 ## Python mapper script
 
-The python mapper script can be found here [bed_peak_mapper.py](../../script/bed_peak_jaccard_calculation/bed_peak_mapper.py)
+The python mapper script can be found here [bed_peak_mapper.py](../../script/bed_peak_jaccard_calculation/)
 
 ## Load input to HDFS
 
