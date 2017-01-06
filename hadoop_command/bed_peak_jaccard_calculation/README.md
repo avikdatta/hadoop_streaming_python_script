@@ -8,7 +8,7 @@ Raspberry pi3 specific hadoop config files can be found here [Hadoop config file
 
 ## Docker config
 
-I used a docker image for these data analysis script. This image can be either build from the docker file present in git [python_docker_file](https://github.com/avikdatta/python_data_docker_files/tree/master/python_docker_file) or downloading the docker image from the docker hub [python docker image](https://hub.docker.com/r/avikdatta/python_data/)
+I used a docker image for running this data analysis script. This image either can be built using the docker file present in git [python_docker_file](https://github.com/avikdatta/python_data_docker_files/tree/master/python_docker_file) or it can be fetched directly from the docker hub [python docker image](https://hub.docker.com/r/avikdatta/python_data/)
 
 ## MySQL tables
 
